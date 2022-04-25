@@ -37,26 +37,26 @@ const SideNavRouter = () => {
         {Object.entries(routes)
           .map(([path, { Component, title, sources, katacodaLayout }]) => Component
             ? <AppRoute
-                key={path}
-                path={path}
-                default={path === '/404'}
-                child={<Component />}
-                katacodaLayout={katacodaLayout}
-                title={title}
-              />
+              key={path}
+              path={path}
+              default={path === '/404'}
+              child={<Component />}
+              katacodaLayout={katacodaLayout}
+              title={title}
+            />
             : <AppRoute
-                key={path}
-                path={path + '/*'}
-                child={
-                  <MDXTemplate
-                    path={path}
-                    title={title}
-                    sources={sources}
-                  />
-                }
-                katacodaLayout={katacodaLayout}
-                title={title}
-              />
+              key={path}
+              path={path + '/*'}
+              child={
+                <MDXTemplate
+                  path={path}
+                  title={title}
+                  sources={sources}
+                />
+              }
+              katacodaLayout={katacodaLayout}
+              title={title}
+            />
           )
         }
       </Router>

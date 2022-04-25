@@ -1,10 +1,6 @@
 #!/usr/bin/env node
 const program = require('commander');
 
-console.log('asdfasd');
-module.paths.push('./')
-require.main.paths.push('./')
-
 program
   .option('-c, --config <path>', 'set config path', './patternfly-docs.config.js')
   .option('-css, --cssconfig <path>', 'set css import file path', './patternfly-docs.css.js')
@@ -31,7 +27,6 @@ program
   .option('-a, --analyze', 'use webpack-bundle-analyzer', false)
   .description('generates source files and runs webpack')
   .action((cmd, options) => {
-    console.log("KLJSDFJKL<SDFGHKJSHDFGKSJDHGFKSJDHFG");
     const { build } = require('./build');
     build(cmd, options);
   });
