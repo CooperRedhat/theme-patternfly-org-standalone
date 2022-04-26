@@ -22,6 +22,7 @@ const AppRoute = ({ child, katacodaLayout, title, path }) => {
   }
   return (
     <React.Fragment>
+      <div>cool</div>
       {child}
       {!katacodaLayout && process.env.hasFooter && <Footer />}
     </React.Fragment>
