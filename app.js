@@ -6,7 +6,7 @@ import { Footer } from 'theme-patternfly-org/components';
 import { MDXTemplate } from 'theme-patternfly-org/templates/mdx';
 import { routes, groupedRoutes, fullscreenRoutes, getAsyncComponent } from './routes';
 import { trackEvent } from './helpers';
-import 'client-styles';
+import './defaults/client-styles.css';
 
 const AppRoute = ({ child, katacodaLayout, title, path }) => {
   const pathname = useLocation().pathname;
@@ -22,7 +22,6 @@ const AppRoute = ({ child, katacodaLayout, title, path }) => {
   }
   return (
     <React.Fragment>
-      <div>cool</div>
       {child}
       {!katacodaLayout && process.env.hasFooter && <Footer />}
     </React.Fragment>

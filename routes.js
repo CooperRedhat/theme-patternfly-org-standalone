@@ -1,7 +1,7 @@
 // This module is shared between NodeJS and babelled ES5
 const { makeSlug, slugger } = require('theme-patternfly-org/helpers/slugger');
 const { asyncComponentFactory } = require('theme-patternfly-org/helpers/asyncComponentFactory');
-const clientRoutes = require('./routes-client'); // Webpack replaces this import
+const clientRoutes = require('./defaults/routes'); // Webpack replaces this import
 const generatedRoutes = require('./routes-generated'); // Webpack replaces this import
 
 const routes = {

@@ -1,7 +1,7 @@
 {
-  "name": "theme-patternfly-org",
+  "name": "theme-patternfly-org-standalone",
   "description": "A unified PatternFly and PatternFly-React theme.",
-  "version": "0.11.29",
+  "version": "0.0.1",
   "author": "Red Hat",
   "license": "MIT",
   "bin": {
@@ -89,6 +89,6 @@
     "@patternfly/react-virtualized-extension": "^4.53.1",
     "react": "link:../pf-extension-docs/node_modules/react",
     "react-dom": "link:../pf-extension-docs/node_modules/react-dom",
-    "theme-patternfly-org": "^0.11.30"
+    "theme-patternfly-org": "link:."
   }
 }
